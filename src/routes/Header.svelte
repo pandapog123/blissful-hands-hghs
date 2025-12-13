@@ -27,6 +27,18 @@
       <a href="/" class="page-link">Home</a>
     </li>
     <li>
+      <a
+        class="page-link"
+        href="https://www.zeffy.com/en-US/donation-form/blissful-hands"
+        target="_blank"
+        on:click={() => {
+          $headerShown = false;
+        }}
+      >
+        <div>Donate</div>
+      </a>
+    </li>
+    <li>
       <Link href="/contact" variant="primary">Contact</Link>
     </li>
   </ul>
@@ -100,6 +112,14 @@
     text-decoration: none;
     color: var(--neutral);
     position: relative;
+    display: flex;
+    align-items: center;
+    gap: 0.25rem;
+  }
+
+  .page-link svg {
+    width: 1.25rem;
+    height: 1.25rem;
   }
 
   .page-link::after {

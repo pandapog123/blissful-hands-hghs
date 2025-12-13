@@ -6,6 +6,7 @@
   import favicon from "$lib/assets/favicon.svg";
   import { writable } from "svelte/store";
   import Header from "./Header.svelte";
+  import Footer from "./Footer.svelte";
 
   let { children } = $props();
 </script>
@@ -27,7 +28,7 @@
   {@render children()}
 </main>
 
-<footer></footer>
+<Footer />
 
 <div class="menu-popup" class:shown={$headerShown}>
   <div class="menu-links">
@@ -40,6 +41,32 @@
             $headerShown = false;
           }}>Home</a
         >
+      </li>
+      <li>
+        <a
+          class="page-link"
+          href="https://www.zeffy.com/en-US/donation-form/blissful-hands"
+          target="_blank"
+          on:click={() => {
+            $headerShown = false;
+          }}
+        >
+          <div>Donate</div>
+          <svg
+            xmlns="http://www.w3.org/2000/svg"
+            fill="none"
+            viewBox="0 0 24 24"
+            stroke-width="1.5"
+            stroke="currentColor"
+            class="size-6"
+          >
+            <path
+              stroke-linecap="round"
+              stroke-linejoin="round"
+              d="M13.5 6H5.25A2.25 2.25 0 0 0 3 8.25v10.5A2.25 2.25 0 0 0 5.25 21h10.5A2.25 2.25 0 0 0 18 18.75V10.5m-10.5 6L21 3m0 0h-5.25M21 3v5.25"
+            />
+          </svg>
+        </a>
       </li>
       <li>
         <a
@@ -120,6 +147,17 @@
     margin: 0;
     border: none;
     background-color: transparent;
+  }
+
+  .menu-links a {
+    display: flex;
+    align-items: center;
+    gap: 0.5rem;
+  }
+
+  .menu-links a svg {
+    width: 2rem;
+    height: 2rem;
   }
 
   .menu-links button svg {

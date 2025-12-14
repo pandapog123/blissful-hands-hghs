@@ -24,9 +24,9 @@
           </svg>
         </a>
       </li>
-      <li class="site-link">
+      <!-- <li class="site-link">
         <a href="/contact" data-sveltekit-preload-data="off">Contact</a>
-      </li>
+      </li> -->
     </ul>
 
     <ul class="social-links">

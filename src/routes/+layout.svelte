@@ -71,6 +71,15 @@
       </li>
       <li>
         <a
+          href="/about"
+          class="page-link"
+          on:click={() => {
+            $linkMenuShown = false;
+          }}>About</a
+        >
+      </li>
+      <li>
+        <a
           class="page-link"
           href="https://www.zeffy.com/en-US/donation-form/blissful-hands"
           target="_blank"
@@ -173,6 +182,7 @@
     transition: all 100ms ease-in-out;
     opacity: 0;
     pointer-events: none;
+    z-index: 10;
   }
   .menu-links {
     display: flex;

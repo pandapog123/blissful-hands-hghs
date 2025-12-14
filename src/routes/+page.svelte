@@ -3,8 +3,16 @@
   import Title2 from "$lib/assets/images/title-2.png";
   import Title3 from "$lib/assets/images/title-3.png";
   import Title4 from "$lib/assets/images/title-4.png";
+
+  import HomeDepotURL from "$lib/assets/sponsors/Home Depot Logo.png";
+  import NanaBBURL from "$lib/assets/sponsors/Nana's Baby Boutique.png";
+  import TEFURL from "$lib/assets/sponsors/The education fund.png";
+  import VPURL from "$lib/assets/sponsors/Virtutem Populo.png";
+  import WalmartURL from "$lib/assets/sponsors/Walmart Logo.png";
+
   import { onMount } from "svelte";
 
+  // #region title
   let titleImages = [Title1, Title2, Title3, Title4];
 
   let currentImage = $state(1);
@@ -31,6 +39,7 @@
   onMount(() => {
     setTimeout(swapCurrentImage, 4000);
   });
+  // #endregion
 </script>
 
 <section class="title">
@@ -134,7 +143,26 @@
   </div>
 </section>
 
-<section class="sponsors"></section>
+<section class="sponsors">
+  <h1>Our Sponsors</h1>
+
+  <div class="sponsors-container">
+    <div class="sponsors-images">
+      <img src={HomeDepotURL} alt="Home Depot Logo" />
+      <img src={NanaBBURL} alt="Nana's Baby Boutique Logo" />
+      <img src={TEFURL} alt="The Education Fund Logo" />
+      <img src={VPURL} alt="Virtutem Populo Logo" />
+      <img src={WalmartURL} alt="Walmart Logo" />
+    </div>
+    <div class="sponsors-images double">
+      <img src={HomeDepotURL} alt="Home Depot Logo" />
+      <img src={NanaBBURL} alt="Nana's Baby Boutique Logo" />
+      <img src={TEFURL} alt="The Education Fund Logo" />
+      <img src={VPURL} alt="Virtutem Populo Logo" />
+      <img src={WalmartURL} alt="Walmart Logo" />
+    </div>
+  </div>
+</section>
 
 <section class="achievements"></section>
 
@@ -153,25 +181,26 @@
     display: flex;
     justify-content: left;
     align-items: center;
-    padding: 12rem 8rem;
+    padding: 10rem 2rem;
   }
 
   .title-content {
     display: flex;
     flex-direction: column;
+    width: 100%;
     gap: 2rem;
     color: white;
   }
 
   .title h1 {
-    font-size: 4rem;
-    max-width: 32rem;
+    font-size: 2rem;
+    max-width: 26rem;
   }
 
   .title p {
-    font-size: 1.3rem;
-    line-height: 1.5rem;
-    max-width: 30rem;
+    font-size: 1rem;
+    line-height: 1.2rem;
+    max-width: 25rem;
   }
 
   .title-phrase {
@@ -186,8 +215,10 @@
   }
 
   .links a {
+    flex: 1;
+    text-align: center;
     text-decoration: none;
-    padding: 0.75rem 1.5rem;
+    padding: 0.75rem 0rem;
     border-radius: 0.5rem;
     font-weight: 500;
     transition: all 200ms ease-in-out;
@@ -290,5 +321,94 @@
     opacity: 1;
   }
 
+  @media (min-width: 600px) {
+    .title-content {
+      width: auto;
+    }
+
+    .links a {
+      flex: none;
+    }
+
+    .links a {
+      padding: 0.75rem 1.5rem;
+    }
+  }
+
+  @media (min-width: 700px) {
+    .title {
+      padding: 12rem 6rem;
+    }
+
+    .title h1 {
+      font-size: 4rem;
+      max-width: 32rem;
+    }
+
+    .title p {
+      font-size: 1.3rem;
+      line-height: 1.5rem;
+      max-width: 30rem;
+    }
+  }
+
+  /* #endregion */
+
+  /* #region sponsors */
+  .sponsors {
+    display: flex;
+    align-items: center;
+    flex-direction: column;
+    gap: 1rem;
+    padding: 2rem 0;
+  }
+  .sponsors h1 {
+    font-size: 2rem;
+    text-align: center;
+  }
+
+  .sponsors .sponsors-container {
+    display: flex;
+    width: fit-content;
+    position: relative;
+    animation: sponsors-scroll 15s linear forwards infinite;
+  }
+
+  .sponsors .sponsors-images {
+    padding: 1rem 1rem;
+    display: flex;
+    min-width: 100vw;
+    justify-content: space-between;
+  }
+
+  .sponsors-images > * {
+    margin-right: 4rem;
+  }
+
+  .sponsors .sponsors-images.double {
+    position: absolute;
+    left: 100%;
+  }
+
+  .sponsors img {
+    object-fit: contain;
+    max-height: 8rem;
+    max-width: 24rem;
+  }
+
+  @keyframes sponsors-scroll {
+    from {
+      transform: translateX(0px);
+    }
+
+    to {
+      transform: translateX(-100%);
+    }
+  }
+
+  .sponsors .sponsors-images {
+    display: flex;
+    gap: 1rem;
+  }
   /* #endregion */
 </style>

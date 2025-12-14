@@ -147,11 +147,14 @@
 {/if}
 
 <style>
+  :global(:root) {
+    overflow-x: hidden;
+  }
   :global(body) {
     margin: 0;
     font-family: "Raleway", sans-serif;
     --primary: #e6e3fe;
-    /* --off-primary: #c8c8c8; */
+    --off-primary: #dad6fb;
     --primary-text: #a36fea;
     --secondary: #e6e3fe;
     --accent: #fcb5b2;

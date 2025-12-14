@@ -24,7 +24,9 @@
           </svg>
         </a>
       </li>
-      <li class="site-link"><a href="/contact">Contact</a></li>
+      <li class="site-link">
+        <a href="/contact" data-sveltekit-preload-data="off">Contact</a>
+      </li>
     </ul>
 
     <ul class="social-links">
@@ -160,6 +162,10 @@
 
     .social-links a div {
       display: none;
+    }
+
+    .links {
+      align-items: center;
     }
 
     ul {

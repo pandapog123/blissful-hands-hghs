@@ -1,18 +1,42 @@
 <script lang="ts" module>
-  export const headerShown = writable(false);
+  export const linkMenuShown = writable(false);
+  // export const headerShown = writable(true);
+  // export const safeHeaderShown = writable(true);
+  // export const footerShown = writable(true);
 </script>
 
 <script lang="ts">
-  import favicon from "$lib/assets/favicon.svg";
+  let mounted = false;
+
+  onMount(() => {
+    mounted = true;
+  });
+
+  afterNavigate(({ to }) => {
+    // if (!mounted) return;
+    // if (to?.route.id === "/contact") {
+    //   headerShown.set(true);
+    //   safeHeaderShown.set(false);
+    //   footerShown.set(false);
+    // } else {
+    //   safeHeaderShown.set(true);
+    //   headerShown.set(true);
+    //   footerShown.set(true);
+    // }
+  });
+
   import { writable } from "svelte/store";
   import Header from "./Header.svelte";
   import Footer from "./Footer.svelte";
+  import { afterNavigate } from "$app/navigation";
+  import BrandURL from "$lib/assets/Brand.png";
 
-  let { children } = $props();
+  import { onMount } from "svelte";
+  import { page } from "$app/state";
 </script>
 
 <svelte:head>
-  <link rel="icon" href={favicon} />
+  <link rel="icon" href={BrandURL} />
 
   <link rel="preconnect" href="https://fonts.googleapis.com" />
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
@@ -20,17 +44,20 @@
     href="https://fonts.googleapis.com/css2?family=Raleway:ital,wght@0,100..900;1,100..900&display=swap"
     rel="stylesheet"
   />
+
+  {#if page.data.title}
+    <title>Blissful Hands | {page.data.title}</title>
+  {:else}
+    <title>Blissful Hands</title>
+  {/if}
 </svelte:head>
 
-<Header />
-
-<main>
-  {@render children()}
-</main>
-
-<Footer />
-
-<div class="menu-popup" class:shown={$headerShown}>
+<div
+  class="menu-popup"
+  class:shown={$linkMenuShown}
+  aria-hidden={`${!$linkMenuShown}`}
+  inert={!$linkMenuShown}
+>
   <div class="menu-links">
     <ul>
       <li>
@@ -38,7 +65,7 @@
           href="/"
           class="page-link"
           on:click={() => {
-            $headerShown = false;
+            $linkMenuShown = false;
           }}>Home</a
         >
       </li>
@@ -48,7 +75,7 @@
           href="https://www.zeffy.com/en-US/donation-form/blissful-hands"
           target="_blank"
           on:click={() => {
-            $headerShown = false;
+            $linkMenuShown = false;
           }}
         >
           <div>Donate</div>
@@ -73,7 +100,7 @@
           href="/contact"
           class="page-link"
           on:click={() => {
-            $headerShown = false;
+            $linkMenuShown = false;
           }}>Contact</a
         >
       </li>
@@ -81,7 +108,7 @@
 
     <button
       on:click={() => {
-        $headerShown = false;
+        $linkMenuShown = false;
       }}
       aria-label="Close menu"
     >
@@ -102,6 +129,22 @@
     </button>
   </div>
 </div>
+
+{#if page.data.ui.showHeader}
+  <div inert={$linkMenuShown}>
+    <Header safeHide={page.data.ui.safeHeader ?? true} />
+  </div>
+{/if}
+
+<main inert={$linkMenuShown}>
+  <slot />
+</main>
+
+{#if page.data.ui.showFooter}
+  <div inert={$linkMenuShown}>
+    <Footer />
+  </div>
+{/if}
 
 <style>
   :global(body) {

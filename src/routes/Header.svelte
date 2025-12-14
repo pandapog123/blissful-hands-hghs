@@ -1,15 +1,21 @@
 <script lang="ts">
+  interface HeaderProps {
+    safeHide: boolean;
+  }
+
+  let headerProps: HeaderProps = $props();
+
   import Link from "$lib/components/Link.svelte";
 
   import BrandURL from "$lib/assets/Brand.png";
-  import { headerShown } from "./+layout.svelte";
+  import { linkMenuShown } from "./+layout.svelte";
 
   function handleMenuButtonClick() {
-    $headerShown = !$headerShown;
+    $linkMenuShown = !$linkMenuShown;
   }
 </script>
 
-<header>
+<header class:safe-hide={!headerProps.safeHide}>
   <a href="/" class="brand-link">
     <div class="brand">
       <img src={BrandURL} alt="Blissful Hands Brand" />
@@ -32,14 +38,14 @@
         href="https://www.zeffy.com/en-US/donation-form/blissful-hands"
         target="_blank"
         on:click={() => {
-          $headerShown = false;
+          $linkMenuShown = false;
         }}
       >
         <div>Donate</div>
       </a>
     </li>
     <li>
-      <Link href="/contact" variant="primary">Contact</Link>
+      <Link href="/contact" variant="primary" preventLoad>Contact</Link>
     </li>
   </ul>
 
@@ -151,6 +157,10 @@
   }
 
   @media (min-width: 650px) {
+    .safe-hide {
+      display: none;
+    }
+
     ul {
       display: flex;
     }

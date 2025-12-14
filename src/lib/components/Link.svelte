@@ -2,12 +2,17 @@
   interface LinkProps {
     href: string;
     variant?: "primary" | "outline" | "ghost" | "destructive";
+    preventLoad?: boolean;
   }
 
   let linkProps: LinkProps = $props();
 </script>
 
-<a href={linkProps.href} class={linkProps.variant ?? ""}>
+<a
+  href={linkProps.href}
+  class={linkProps.variant ?? ""}
+  data-sveltekit-preload-data={linkProps.preventLoad ? "off" : "on"}
+>
   <slot />
 </a>
 

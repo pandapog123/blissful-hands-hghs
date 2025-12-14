@@ -10,6 +10,9 @@
   import VPURL from "$lib/assets/sponsors/Virtutem Populo.png";
   import WalmartURL from "$lib/assets/sponsors/Walmart Logo.png";
 
+  import ShowcaseVideoURL from "$lib/assets/final isa/FINAL ISA OPT.mp4";
+  import ShowcaseVideoTNURL from "$lib/assets/final isa/FINAL ISA TN.png";
+
   import { onMount } from "svelte";
 
   // #region title
@@ -143,34 +146,86 @@
   </div>
 </section>
 
+<section class="showcase">
+  <div class="showcase-text">
+    <h1>See Our Work in Action</h1>
+
+    <h2>
+      A glimpse into the quality, care, and impact behind everything we do.
+    </h2>
+
+    <p>
+      At Blissful Hands, we focus on supporting our community. We aim to create
+      a welcoming environment where people feel cared for and connected. Every
+      action we take is guided by the needs of the people around us.
+    </p>
+  </div>
+
+  <!-- poster={Title1} -->
+  <video
+    autoplay
+    muted
+    loop
+    playsinline
+    preload="metadata"
+    poster={ShowcaseVideoTNURL}
+  >
+    <source src={ShowcaseVideoURL} type="video/mp4" />
+  </video>
+</section>
+
+<hr class="root-divider" />
+
 <section class="sponsors">
   <h1>Our Sponsors</h1>
 
   <div class="sponsors-container">
-    <div class="sponsors-images">
-      <img src={HomeDepotURL} alt="Home Depot Logo" />
-      <img src={NanaBBURL} alt="Nana's Baby Boutique Logo" />
-      <img src={TEFURL} alt="The Education Fund Logo" />
-      <img src={VPURL} alt="Virtutem Populo Logo" />
-      <img src={WalmartURL} alt="Walmart Logo" />
-    </div>
-    <div class="sponsors-images double">
-      <img src={HomeDepotURL} alt="Home Depot Logo" />
-      <img src={NanaBBURL} alt="Nana's Baby Boutique Logo" />
-      <img src={TEFURL} alt="The Education Fund Logo" />
-      <img src={VPURL} alt="Virtutem Populo Logo" />
-      <img src={WalmartURL} alt="Walmart Logo" />
+    <div class="sponsors-wrapper">
+      <div class="sponsors-images">
+        <img src={HomeDepotURL} alt="Home Depot Logo" />
+        <img src={NanaBBURL} alt="Nana's Baby Boutique Logo" />
+        <img src={TEFURL} alt="The Education Fund Logo" />
+        <img src={VPURL} alt="Virtutem Populo Logo" />
+        <img src={WalmartURL} alt="Walmart Logo" />
+      </div>
+      <div class="sponsors-images double">
+        <img src={HomeDepotURL} alt="Home Depot Logo" />
+        <img src={NanaBBURL} alt="Nana's Baby Boutique Logo" />
+        <img src={TEFURL} alt="The Education Fund Logo" />
+        <img src={VPURL} alt="Virtutem Populo Logo" />
+        <img src={WalmartURL} alt="Walmart Logo" />
+      </div>
     </div>
   </div>
 </section>
 
-<section class="achievements"></section>
+<section class="achievements">
+  <div class="left">
+    <h1>Our Achievements</h1>
+
+    <h2>
+      We spend time ensuring others get the relaxation they need, whether it’s
+      students, faculty, or even members of the local community.
+    </h2>
+
+    <p>
+      Vestibulum ante ipsum primis in faucibus orci luctus et ultrices posuere
+      cubilia curae; Vivamus quis laoreet velit, sed consectetur eros.
+    </p>
+  </div>
+
+  <div class="right"></div>
+</section>
 
 <section class="socials"></section>
 
 <style>
   * {
     margin: 0;
+  }
+
+  .root-divider {
+    border: solid rgba(0, 0, 0, 0.1) 0.5px;
   }
 
   /* #region title */
@@ -347,11 +402,97 @@
 
     .title p {
       font-size: 1.3rem;
-      line-height: 1.5rem;
+      line-height: 1.8rem;
       max-width: 30rem;
     }
   }
 
+  /* #endregion */
+
+  /* #region showcase */
+  .showcase {
+    padding: 1rem;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    gap: 2rem;
+  }
+
+  .showcase .showcase-text {
+    display: flex;
+    flex-direction: column;
+    gap: 0.5rem;
+    /* max-width: 90vw; */
+    width: 100%;
+  }
+
+  .showcase-text h1 {
+    font-size: 2rem;
+  }
+  .showcase-text h2 {
+    font-size: 1.2rem;
+    font-weight: 500;
+  }
+
+  .showcase-text p {
+    display: none;
+  }
+
+  .showcase video {
+    object-fit: cover;
+    max-width: 100%;
+
+    border-radius: 1rem;
+    aspect-ratio: 16 / 9;
+  }
+
+  @media (min-width: 700px) {
+    .showcase {
+      padding: 2rem;
+    }
+
+    .showcase .showcase-text {
+      max-width: 70vw;
+    }
+
+    .showcase video {
+      max-width: 70vw;
+    }
+
+    .showcase-text h1 {
+      font-size: 2.5rem;
+    }
+    .showcase-text h2 {
+      font-size: 1.5rem;
+
+      max-width: 25rem;
+    }
+  }
+
+  @media (min-width: 1000px) {
+    .showcase {
+      flex-direction: row;
+      align-items: flex-start;
+    }
+    .showcase .showcase-text {
+      width: fit-content;
+    }
+
+    .showcase-text p {
+      display: block;
+      width: 25rem;
+      margin-top: 1rem;
+      font-size: 1.2rem;
+    }
+
+    .showcase video {
+      min-width: 0;
+      flex: 1;
+      height: auto;
+      max-width: 100%;
+    }
+  }
   /* #endregion */
 
   /* #region sponsors */
@@ -368,6 +509,13 @@
   }
 
   .sponsors .sponsors-container {
+    display: flex;
+    width: 100vw;
+    overflow: hidden;
+    /* position: relative; */
+    /* animation: sponsors-scroll 15s linear forwards infinite; */
+  }
+  .sponsors .sponsors-wrapper {
     display: flex;
     width: fit-content;
     position: relative;
@@ -409,6 +557,46 @@
   .sponsors .sponsors-images {
     display: flex;
     gap: 1rem;
+  }
+  /* #endregion */
+
+  /* #region achievements */
+  .achievements {
+    display: flex;
+    flex-direction: column;
+    gap: 2rem;
+    padding: 1rem;
+  }
+
+  .achievements .left {
+    display: flex;
+    flex-direction: column;
+    gap: 1rem;
+  }
+
+  .achievements .left h1 {
+    font-size: 1.5rem;
+    color: var(--primary-text);
+  }
+
+  .achievements .left h2 {
+    font-size: 2rem;
+  }
+
+  .achievements .left p {
+    font-size: 1rem;
+    line-height: 1.25rem;
+  }
+
+  @media (min-width: 800px) {
+    .achievements {
+      justify-content: center;
+      flex-direction: row;
+    }
+
+    .achievements > * {
+      max-width: 30rem;
+    }
   }
   /* #endregion */
 </style>

@@ -33,6 +33,15 @@
 
   import { onMount } from "svelte";
   import { page } from "$app/state";
+
+  $effect(() => {
+    if ($linkMenuShown) {
+      document.body.style.overflowY = "hidden";
+    } else {
+      document.body.style.overflowY = "";
+    }
+    console.log(document.body.style.overflowY);
+  });
 </script>
 
 <svelte:head>
@@ -156,8 +165,10 @@
 {/if}
 
 <style>
-  :global(:root) {
+  :global(body) {
     overflow-x: hidden;
+
+    /* overflow-y: hidden; */
   }
   :global(body) {
     margin: 0;
@@ -173,7 +184,7 @@
   }
 
   .menu-popup {
-    position: absolute;
+    position: fixed;
     left: 0;
     top: 0;
     width: 100vw;

@@ -32,9 +32,9 @@
     <li>
       <a href="/" class="page-link">Home</a>
     </li>
-    <li>
+    <!-- <li>
       <a href="/about" class="page-link">About</a>
-    </li>
+    </li> -->
     <li>
       <a
         class="page-link"

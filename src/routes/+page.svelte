@@ -13,6 +13,12 @@
   import ShowcaseVideoURL from "$lib/assets/final isa/FINAL ISA OPT.mp4";
   import ShowcaseVideoTNURL from "$lib/assets/final isa/FINAL ISA TN.png";
 
+  import GardensSproutURL from "$lib/assets/achievements/Garden Sprouts.png";
+  import NathanBYoung from "$lib/assets/achievements/Nathan B Young.png";
+  import LotusHouse2025 from "$lib/assets/achievements/Lotus House 2025.png";
+  import NathanBYoungTT from "$lib/assets/achievements/Nathan B Young Trunk or Treat.png";
+  import CamillusHouse from "$lib/assets/achievements/Camillus House.png";
+
   import { onMount } from "svelte";
 
   // #region title
@@ -65,7 +71,7 @@
         Donate Now
       </a>
 
-      <a href="/about" class="about">Learn More</a>
+      <!-- <a href="/about" class="about">Learn More</a> -->
     </div>
   </div>
 
@@ -214,9 +220,155 @@
     </p>
   </div>
 
-  <div class="right"></div>
+  <div class="right">
+    <div class="achievement">
+      <img src={GardensSproutURL} alt="[Generic]" />
+
+      <div class="achievement-text">
+        <h1>Garden Sprouts Program</h1>
+
+        <h2>Hialeah Gardens High School Childcare & Preschool center</h2>
+
+        <p>
+          Since August 2023, Blissful Hands has been leading seasonal and
+          holiday-themed mindfulness classes at the Hialeah Gardens High School
+          childcare and preschool center. Through our partnership with the
+          Garden Sprouts program, we work with children ages 3–5, guiding them
+          through activities that help them explore their emotions and build
+          healthy, positive habits for lifelong mental well-being. Every two
+          months, our team brings engaging sessions filled with mindfulness
+          exercises, simple yoga, and hands-on creative projects that teach
+          emotional regulation, kindness, and confidence. These moments reflect
+          our nonprofit’s mission to support mental health from an early
+          age—creating nurturing, joyful spaces where young learners can grow,
+          feel understood, and thrive.
+        </p>
+      </div>
+    </div>
+
+    <div class="achievement">
+      <img src={NathanBYoung} alt="[Generic]" />
+
+      <div class="achievement-text">
+        <h1>Summer 2025 Back to School Community Donations</h1>
+
+        <h2>
+          Nathan B Young Elementary & Dr. Frederica S. Wilson/Skyway Elementary
+          School (August 11, 2025)
+        </h2>
+
+        <p>
+          This summer, we poured our hearts into giving back, and none of it
+          would've been possible without our incredible community.
+        </p>
+
+        <p>
+          We proudly supported students by providing new uniforms, backpacks,
+          headphones, and school supplies, along with extra supplies for
+          teachers to kick off the school year prepared.
+        </p>
+
+        <p>
+          At Nathan B. Young Elementary, we donated 50 fully stocked 2nd-grade
+          backpacks, 100 uniform polos, and brought smiles through face
+          painting.
+        </p>
+
+        <p>
+          At Skyway Elementary, we supported 18 first graders with their full
+          supply lists and added more face painting fun.
+        </p>
+
+        <p>
+          A huge THANK YOU to our sponsors, Walmart, The Education Fund,
+          MetroPCS, NHS, Triumph AC, Nuevo Amanecer Cafe, Latin Churro, and
+          Costco for believing in our mission. And a special thank you to Alvaro
+          Ramirez from Stingtown News for this amazing recap.
+        </p>
+      </div>
+    </div>
+
+    <div class="achievement">
+      <img src={LotusHouse2025} alt="[Generic]" />
+
+      <div class="achievement-text">
+        <h1>More Summer 2025 Back to School Community Donations</h1>
+
+        <h2>
+          Lotus House Sponsored 12 Kids for Back to School Prep (Given on August
+          6, 2025)
+        </h2>
+
+        <p>
+          Every child deserves to walk into school feeling confident, cared for,
+          and ready to succeed.
+        </p>
+
+        <p>
+          We were honored to sponsor 12 amazing kids at Lotus House, providing
+          them with the uniforms, shoes, and socks they need to start the school
+          year strong.
+        </p>
+
+        <p>
+          We love being able to continue working with Lotus House and are so
+          grateful for the opportunity to give back to such an incredible
+          community.
+        </p>
+      </div>
+    </div>
+
+    <div class="achievement">
+      <img src={NathanBYoungTT} alt="[Generic]" />
+
+      <div class="achievement-text">
+        <h1>Seasonal Events</h1>
+
+        <h2>
+          Nathan B Young Elementary Halloween Trunk or Treat Volunteer Recruit
+        </h2>
+
+        <p>
+          Lorem ipsum dolor sit amet consectetur adipisicing elit. Ipsum, neque
+          velit sit placeat corporis quis?
+        </p>
+
+        <p>
+          Lorem ipsum dolor sit amet, consectetur adipisicing elit. Veritatis in
+          officiis corporis ipsam eaque eligendi quis adipisci consequatur error
+          unde!
+        </p>
+
+        <p>
+          Lorem ipsum dolor sit, amet consectetur adipisicing elit. Aspernatur
+          ipsa laborum explicabo modi, commodi obcaecati architecto repellendus
+          non eaque eum!
+        </p>
+      </div>
+    </div>
+
+    <div class="achievement">
+      <img src={CamillusHouse} alt="[Generic]" />
+
+      <div class="achievement-text">
+        <h1>More Donations!</h1>
+
+        <h2>Camillus House Kid’s Clothing Donation Drive</h2>
+
+        <p>
+          On Tuesday, September 30th, Blissful Hands officers dropped off our
+          Camillus House donations! With our members' support, we were able to
+          help the children and families experiencing homelessness at Camillus
+          House. We couldn't have done this without the generosity of our
+          amazing members-thank you for making a difference in our community and
+          donating!
+        </p>
+      </div>
+    </div>
+  </div>
 </section>
 
+<!-- TODO: IG Graph API -->
 <section class="socials"></section>
 
 <style>
@@ -566,6 +718,7 @@
     flex-direction: column;
     gap: 2rem;
     padding: 1rem;
+    position: relative;
   }
 
   .achievements .left {
@@ -588,15 +741,78 @@
     line-height: 1.25rem;
   }
 
-  @media (min-width: 800px) {
+  .achievements .right {
+    display: flex;
+    flex-direction: column;
+    gap: 5rem;
+  }
+
+  .achievement:nth-child(3n + 1) {
+    background-color: var(--primary);
+  }
+
+  .achievement:nth-child(3n + 2) {
+    background-color: var(--secondary);
+  }
+
+  .achievement:nth-child(3n) {
+    background-color: var(--accent);
+  }
+
+  .achievement {
+    overflow: hidden;
+    border-radius: 1rem;
+  }
+
+  .achievement .achievement-text {
+    padding: 1rem;
+    display: flex;
+    flex-direction: column;
+    gap: 0.5rem;
+  }
+
+  .achievement h1 {
+    font-size: 1.75rem;
+  }
+
+  .achievement h2 {
+    font-size: 1.25rem;
+    line-height: 1.5rem;
+    font-weight: 600;
+  }
+
+  .achievement p {
+    font-size: 0.9rem;
+    line-height: 1.25rem;
+  }
+
+  .achievement img {
+    object-fit: cover;
+    width: 100%;
+    max-height: 20rem;
+  }
+
+  @media (min-width: 900px) {
     .achievements {
       justify-content: center;
       flex-direction: row;
     }
 
     .achievements > * {
-      max-width: 30rem;
+      max-width: 35rem;
     }
+
+    .achievements .left {
+      position: sticky;
+      top: 0px;
+      left: 0px;
+      height: min-content;
+      padding-top: 1rem;
+    }
+
+    /* .achievement img {
+      max-width: 30rem;
+    } */
   }
   /* #endregion */
 </style>

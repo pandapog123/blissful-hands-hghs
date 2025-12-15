@@ -78,7 +78,7 @@
           }}>Home</a
         >
       </li>
-      <li>
+      <!-- <li>
         <a
           href="/about"
           class="page-link"
@@ -86,7 +86,7 @@
             $linkMenuShown = false;
           }}>About</a
         >
-      </li>
+      </li> -->
       <li>
         <a
           class="page-link"
@@ -176,7 +176,7 @@
     --primary: #e6e3fe;
     --off-primary: #dad6fb;
     --primary-text: #a36fea;
-    --secondary: #e6e3fe;
+    --secondary: #fef2e3;
     --accent: #fcb5b2;
     --off-accent: #f09d9a;
     --neutral: #141414;

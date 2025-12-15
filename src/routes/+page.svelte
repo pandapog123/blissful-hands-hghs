@@ -71,7 +71,7 @@
         Donate Now
       </a>
 
-      <!-- <a href="/about" class="about">Learn More</a> -->
+      <a href="/about" class="about">Learn More</a>
     </div>
   </div>
 
@@ -215,8 +215,8 @@
     </h2>
 
     <p>
-      Vestibulum ante ipsum primis in faucibus orci luctus et ultrices posuere
-      cubilia curae; Vivamus quis laoreet velit, sed consectetur eros.
+      Helping others find a little peace and happiness is at the heart of what
+      we do.
     </p>
   </div>
 
@@ -235,13 +235,16 @@
           childcare and preschool center. Through our partnership with the
           Garden Sprouts program, we work with children ages 3–5, guiding them
           through activities that help them explore their emotions and build
-          healthy, positive habits for lifelong mental well-being. Every two
-          months, our team brings engaging sessions filled with mindfulness
-          exercises, simple yoga, and hands-on creative projects that teach
-          emotional regulation, kindness, and confidence. These moments reflect
-          our nonprofit’s mission to support mental health from an early
-          age—creating nurturing, joyful spaces where young learners can grow,
-          feel understood, and thrive.
+          healthy, positive habits for lifelong mental well-being.
+        </p>
+
+        <p>
+          Every two months, our team brings engaging sessions filled with
+          mindfulness exercises, simple yoga, and hands-on creative projects
+          that teach emotional regulation, kindness, and confidence. These
+          moments reflect our nonprofit’s mission to support mental health from
+          an early age—creating nurturing, joyful spaces where young learners
+          can grow, feel understood, and thrive.
         </p>
       </div>
     </div>
@@ -258,6 +261,41 @@
         </h2>
 
         <p>
+          On August 11th, 2025, Blissful Hands poured their hearts into giving
+          back, and none of it would've been possible without an incredible
+          community.
+        </p>
+
+        <p>
+          Proudly supported students by providing new uniforms, backpacks,
+          headphones, and school supplies, along with extra supplies for
+          teachers to kick off the school year prepared.
+        </p>
+
+        <p>
+          At Nathan B. Young Elementary, they donated 50 fully stocked 2nd-grade
+          backpacks, 100 uniform polos, and brought smiles through face
+          painting.
+        </p>
+
+        <p>
+          At Skyway Elementary, they supported 18 first graders with their full
+          supply lists and added more face painting fun.
+        </p>
+
+        <p>
+          This would not have been possible without the support of our sponsors.
+          Thanks to Walmart, The Education Fund, MetroPCS, National Honor
+          Society, Triumph AC, Nuevo Amanecer Cafe, Latin Churro, and Costco for
+          carrying out our mission.
+        </p>
+
+        <p>
+          We extend a special thank you to Alvaro Ramirez of Stingtown News for
+          his excellent recap.
+        </p>
+
+        <!-- <p>
           This summer, we poured our hearts into giving back, and none of it
           would've been possible without our incredible community.
         </p>
@@ -284,7 +322,7 @@
           MetroPCS, NHS, Triumph AC, Nuevo Amanecer Cafe, Latin Churro, and
           Costco for believing in our mission. And a special thank you to Alvaro
           Ramirez from Stingtown News for this amazing recap.
-        </p>
+        </p> -->
       </div>
     </div>
 
@@ -329,20 +367,29 @@
         </h2>
 
         <p>
-          Lorem ipsum dolor sit amet consectetur adipisicing elit. Ipsum, neque
-          velit sit placeat corporis quis?
+          Our team had the opportunity to support Nathan B. Young Elementary’s
+          Halloween Trunk-or-Treat event, helping create a safe, welcoming, and
+          memorable experience for students and families in the community.
+          Through volunteering and hands-on support throughout the event, we
+          assisted with activities, engagement, and overall event operations to
+          ensure everything ran smoothly.
         </p>
 
         <p>
-          Lorem ipsum dolor sit amet, consectetur adipisicing elit. Veritatis in
-          officiis corporis ipsam eaque eligendi quis adipisci consequatur error
-          unde!
+          This event brought together students, families, and volunteers to
+          celebrate in a fun and inclusive environment, reinforcing the
+          importance of community involvement and service. By contributing our
+          time and effort, we helped foster a positive atmosphere that allowed
+          families to enjoy a well-organized and festive celebration.
         </p>
 
         <p>
-          Lorem ipsum dolor sit, amet consectetur adipisicing elit. Aspernatur
-          ipsa laborum explicabo modi, commodi obcaecati architecto repellendus
-          non eaque eum!
+          We are grateful for the opportunity to give back to such an incredible
+          community, and this experience highlighted the impact that student
+          volunteers can have when working together toward a shared goal. None
+          of this would have been possible without the collaboration of
+          organizers, volunteers, and supporters who helped make the event a
+          success.
         </p>
       </div>
     </div>
@@ -356,12 +403,18 @@
         <h2>Camillus House Kid’s Clothing Donation Drive</h2>
 
         <p>
-          On Tuesday, September 30th, Blissful Hands officers dropped off our
-          Camillus House donations! With our members' support, we were able to
-          help the children and families experiencing homelessness at Camillus
-          House. We couldn't have done this without the generosity of our
-          amazing members-thank you for making a difference in our community and
-          donating!
+          Blissful Hands had the honor as its second year donating to Camillus
+          House. With the support of their members, on September 30th, 2025,
+          they were able to support families dealing with homelessness at the
+          Camillus House. The club is grateful for the generosity of its
+          members, which enabled it to achieve a greater impact and leave a
+          lasting impression throughout the community.
+        </p>
+
+        <p>
+          With deep Gratitude the generosity of the members, they were able to
+          attain a greater impact, making an impression throughout the
+          community.
         </p>
       </div>
     </div>
@@ -719,6 +772,7 @@
     gap: 2rem;
     padding: 1rem;
     position: relative;
+    margin-bottom: 5rem;
   }
 
   .achievements .left {

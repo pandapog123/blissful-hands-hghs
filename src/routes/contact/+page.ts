@@ -8,3 +8,5 @@ export function load() {
     title: "Contact",
   };
 }
+
+export const prerender = false;

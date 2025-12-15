@@ -9,11 +9,11 @@ const config = {
     adapter: adapter({
       pages: "build",
       assets: "build",
-      fallback: null, // set to 'index.html' for SPA fallback if needed
+      fallback: "index.html", // set to 'index.html' for SPA fallback if needed
     }),
     prerender: {
       // prerender all discoverable routes
-      entries: ["*"],
+      entries: ["/"],
     },
   },
 };

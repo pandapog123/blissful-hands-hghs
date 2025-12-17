@@ -7,9 +7,11 @@ const config = {
 
   kit: {
     adapter: adapter({
+      strict: false,
       pages: "build",
       assets: "build",
-      fallback: "index.html", // set to 'index.html' for SPA fallback if needed
+      fallback: null,
+      // fallback: "index.html", // set to 'index.html' for SPA fallback if needed
     }),
     prerender: {
       // prerender all discoverable routes

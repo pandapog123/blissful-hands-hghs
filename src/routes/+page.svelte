@@ -71,7 +71,7 @@
         Donate Now
       </a>
 
-      <a href="/about" class="about">Learn More</a>
+      <!-- <a href="/about" class="about">Learn More</a> -->
     </div>
   </div>
 
@@ -210,14 +210,11 @@
     <h1>Our Achievements</h1>
 
     <h2>
-      We spend time ensuring others get the relaxation they need, whether it’s
-      students, faculty, or even members of the local community.
+      We spend time ensuring others get the support they need, whether it's
+      students, families, or schools.
     </h2>
 
-    <p>
-      Helping others find a little peace and happiness is at the heart of what
-      we do.
-    </p>
+    <p>Helping others in our community is at the heart of what we do.</p>
   </div>
 
   <div class="right">

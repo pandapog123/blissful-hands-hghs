@@ -11,6 +11,7 @@ declare global {
         showFooter?: boolean;
       };
       title?: string;
+      description?: string;
     }
     // interface PageState {}
     // interface Platform {}

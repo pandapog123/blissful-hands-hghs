@@ -22,7 +22,7 @@
 
       <div class="brand-info">
         <div class="brand-name">Blissful Hands</div>
-        <div class="brand-phrase">BREATH. GIVE. BLISS.</div>
+        <div class="brand-phrase">BREATHE. GIVE. BLISS.</div>
       </div>
     </div>
   </a>
@@ -32,9 +32,9 @@
     <li>
       <a href="/" class="page-link">Home</a>
     </li>
-    <!-- <li>
-      <a href="/about" class="page-link">About</a>
-    </li> -->
+    <li>
+      <!-- <a href="/about" class="page-link">About</a> -->
+    </li>
     <li>
       <a
         class="page-link"

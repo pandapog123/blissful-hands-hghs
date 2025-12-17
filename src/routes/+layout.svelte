@@ -6,32 +6,12 @@
 </script>
 
 <script lang="ts">
-  let mounted = false;
-
-  onMount(() => {
-    mounted = true;
-  });
-
-  afterNavigate(({ to }) => {
-    // if (!mounted) return;
-    // if (to?.route.id === "/contact") {
-    //   headerShown.set(true);
-    //   safeHeaderShown.set(false);
-    //   footerShown.set(false);
-    // } else {
-    //   safeHeaderShown.set(true);
-    //   headerShown.set(true);
-    //   footerShown.set(true);
-    // }
-  });
-
   import { writable } from "svelte/store";
   import Header from "./Header.svelte";
   import Footer from "./Footer.svelte";
-  import { afterNavigate } from "$app/navigation";
+
   import BrandURL from "$lib/assets/Brand.png";
 
-  import { onMount } from "svelte";
   import { page } from "$app/state";
 
   $effect(() => {
@@ -45,7 +25,13 @@
 </script>
 
 <svelte:head>
-  <link rel="icon" href={BrandURL} />
+  <link rel="icon" href="/favicon.ico" type="image/x-icon" />
+
+  <link rel="apple-touch-icon" sizes="180x180" href="/apple-touch-icon.png" />
+  <link rel="icon" type="image/png" sizes="32x32" href="/favicon-32x32.png" />
+  <link rel="icon" type="image/png" sizes="16x16" href="/favicon-16x16.png" />
+
+  <link rel="manifest" href="/site.webmanifest" />
 
   <link rel="preconnect" href="https://fonts.googleapis.com" />
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
@@ -54,11 +40,42 @@
     rel="stylesheet"
   />
 
+  <meta name="author" content="Blissful Hands" />
+  <meta name="robots" content="index, follow" />
+
+  <meta property="og:site_name" content="Blissful Hands" />
+
+  <meta property="og:image" content={BrandURL} />
+  <meta property="og:url" content="https://www.blissfulhands.org" />
+  <meta property="og:site_name" content="Blissful Hands" />
+
+  <meta name="twitter:card" content={BrandURL} />
+  <meta name="twitter:image" content={BrandURL} />
+
   {#if page.data.title}
-    <title>Blissful Hands | {page.data.title}</title>
+    <title>{page.data.title} | Blissful Hands</title>
+
+    <!-- Open Graph -->
+    <meta property="og:title" content={`${page.data.title} | Blissful Hands`} />
+
+    <!-- Twitter -->
+    <meta
+      name="twitter:title"
+      content={`${page.data.title} | Blissful Hands`}
+    />
   {:else}
-    <title>Blissful Hands</title>
+    <title>Blissful Hands | Relax With Us</title>
+
+    <!-- Open Graph -->
+    <meta property="og:title" content="Blissful Hands | Relax With Us" />
+
+    <!-- Twitter -->
+    <meta name="twitter:title" content="Blissful Hands | Relax With Us" />
   {/if}
+
+  <meta name="description" content={page.data.description} />
+  <meta property="og:description" content={page.data.description} />
+  <meta name="twitter:description" content={page.data.description} />
 </svelte:head>
 
 <div

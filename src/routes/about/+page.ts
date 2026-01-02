@@ -57,3 +57,5 @@ export function load() {
     sponsorsData: SPONSORS_DATA,
   };
 }
+
+export const prerender = true;

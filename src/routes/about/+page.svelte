@@ -6,6 +6,12 @@
 
 <section class="title">
   <h1>About Us</h1>
+
+  <p>
+    At Blissful Hands, students take part in hands-on projects and volunteer
+    work to help the local community. Our club focuses on creating opportunities
+    for positive connections and meaningful contributions for our community.
+  </p>
 </section>
 
 <section class="officers">
@@ -55,11 +61,43 @@
 
   /* #region title */
   .title {
-    padding: 2rem;
+    color: var(--off-neutral);
+    padding: 3rem 2rem;
+    background: var(--primary-text);
+    display: flex;
+    flex-direction: column;
+    gap: 0.5rem;
   }
 
   .title h1 {
     font-size: 3rem;
+  }
+
+  .title p {
+    font-weight: 500;
+    font-size: 1.1rem;
+    line-height: 1.4rem;
+  }
+
+  @media (min-width: 450px) {
+    .title h1 {
+      font-size: 4rem;
+    }
+
+    .title p {
+      font-size: 1.25rem;
+      line-height: 1.6rem;
+    }
+  }
+
+  @media (min-width: 800px) {
+    .title {
+      padding: 3rem 5rem;
+    }
+
+    .title h1 {
+      font-size: 5rem;
+    }
   }
   /* #endregion */
 
@@ -73,11 +111,10 @@
 
   .officers ul {
     display: grid;
-    grid-template-columns: repeat(3, 1fr);
+    grid-template-columns: 1fr;
     padding: 0;
     gap: 2rem;
   }
-
   .officers-title {
     display: flex;
     flex-direction: column;
@@ -113,6 +150,19 @@
   .officer p {
     padding: 1rem;
   }
+
+  @media (min-width: 650px) {
+    .officers ul {
+      grid-template-columns: 1fr 1fr;
+    }
+  }
+
+  @media (min-width: 1050px) {
+    .officers ul {
+      grid-template-columns: repeat(3, 1fr);
+    }
+  }
+
   /* #endregion */
 
   /* #region sponsors */
@@ -125,7 +175,7 @@
 
   .sponsors ul {
     display: grid;
-    grid-template-columns: repeat(3, 1fr);
+    grid-template-columns: 1fr;
     padding: 0;
     gap: 2rem;
   }
@@ -164,5 +214,18 @@
   .sponsor p {
     padding: 1rem;
   }
+
+  @media (min-width: 650px) {
+    .sponsors ul {
+      grid-template-columns: 1fr 1fr;
+    }
+  }
+
+  @media (min-width: 1050px) {
+    .sponsors ul {
+      grid-template-columns: repeat(3, 1fr);
+    }
+  }
+
   /* #endregion */
 </style>

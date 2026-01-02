@@ -95,7 +95,7 @@
           }}>Home</a
         >
       </li>
-      <!-- <li>
+      <li>
         <a
           href="/about"
           class="page-link"
@@ -103,7 +103,7 @@
             $linkMenuShown = false;
           }}>About</a
         >
-      </li> -->
+      </li>
       <li>
         <a
           class="page-link"

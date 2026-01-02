@@ -1,8 +1,8 @@
 <script lang="ts">
-  import Title1 from "$lib/assets/images/title-1.png";
-  import Title2 from "$lib/assets/images/title-2.png";
-  import Title3 from "$lib/assets/images/title-3.png";
-  import Title4 from "$lib/assets/images/title-4.png";
+  import Title1 from "$lib/assets/images/webp/title-1.webp";
+  import Title2 from "$lib/assets/images/webp/title-2.webp";
+  import Title3 from "$lib/assets/images/webp/title-3.webp";
+  import Title4 from "$lib/assets/images/webp/title-4.webp";
 
   import HomeDepotURL from "$lib/assets/sponsors/Home Depot Logo.png";
   import NanaBBURL from "$lib/assets/sponsors/Nana's Baby Boutique.png";
@@ -11,13 +11,13 @@
   import WalmartURL from "$lib/assets/sponsors/Walmart Logo.png";
 
   import ShowcaseVideoURL from "$lib/assets/final isa/FINAL ISA OPT.mp4";
-  import ShowcaseVideoTNURL from "$lib/assets/final isa/FINAL ISA TN.png";
+  import ShowcaseVideoTNURL from "$lib/assets/final isa/FINAL ISA TN.webp";
 
-  import GardensSproutURL from "$lib/assets/achievements/Garden Sprouts.png";
-  import NathanBYoung from "$lib/assets/achievements/Nathan B Young.png";
-  import LotusHouse2025 from "$lib/assets/achievements/Lotus House 2025.png";
-  import NathanBYoungTT from "$lib/assets/achievements/Nathan B Young Trunk or Treat.png";
-  import CamillusHouse from "$lib/assets/achievements/Camillus House.png";
+  import GardensSproutURL from "$lib/assets/achievements/webp/Garden Sprouts.webp";
+  import NathanBYoung from "$lib/assets/achievements/webp/Nathan B Young.webp";
+  import LotusHouse2025 from "$lib/assets/achievements/webp/Lotus House 2025.webp";
+  import NathanBYoungTT from "$lib/assets/achievements/webp/Nathan B Young Trunk or Treat.webp";
+  import CamillusHouse from "$lib/assets/achievements/webp/Camillus House.webp";
 
   import { onMount } from "svelte";
 
@@ -71,7 +71,7 @@
         Donate Now
       </a>
 
-      <!-- <a href="/about" class="about">Learn More</a> -->
+      <a href="/about" class="about">Learn More</a>
     </div>
   </div>
 

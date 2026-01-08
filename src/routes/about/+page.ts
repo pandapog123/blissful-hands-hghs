@@ -39,9 +39,6 @@ export function load() {
       positionDescription: "Historian",
       imgURL: SydneyCarr,
     },
-  ];
-
-  let SPONSORS_DATA: Officer[] = [
     {
       name: "Mr. Yera",
       positionDescription: "Main Sponsor",
@@ -49,12 +46,15 @@ export function load() {
     },
   ];
 
+  // let SPONSORS_DATA: Officer[] = [
+  // ];
+
   return {
     title: "About",
     description:
       "Meet the Blissful Hands leadership! Our officers are dedicated to supporting students, fostering community connections, and guiding our mission to help others through meaningful acts of service.",
     officerData: OFFICER_DATA,
-    sponsorsData: SPONSORS_DATA,
+    // sponsorsData: SPONSORS_DATA,
   };
 }
 

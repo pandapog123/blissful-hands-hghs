@@ -32,7 +32,7 @@
   </ul>
 </section>
 
-<section class="sponsors">
+<!-- <section class="sponsors">
   <div class="sponsors-title">
     <h1>Our Sponsors</h1>
 
@@ -48,7 +48,7 @@
       </li>
     {/each}
   </ul>
-</section>
+</section> -->
 
 <style>
   * {

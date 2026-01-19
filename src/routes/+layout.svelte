@@ -130,7 +130,7 @@
           </svg>
         </a>
       </li>
-      <!-- <li>
+      <li>
         <a
           href="/contact"
           class="page-link"
@@ -138,7 +138,7 @@
             $linkMenuShown = false;
           }}>Contact</a
         >
-      </li> -->
+      </li>
     </ul>
 
     <button

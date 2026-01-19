@@ -1,8 +1,9 @@
 <script lang="ts">
   import { afterNavigate, goto } from "$app/navigation";
   import BrandURL from "$lib/assets/Brand.png";
+  import { z } from "zod/mini";
 
-  let backPage: string | undefined | null = null;
+  let backPage: string | undefined | null = $state(null);
 
   afterNavigate(({ from }) => {
     backPage = from?.route.id;
@@ -15,6 +16,14 @@
       goto(backPage);
     }
   }
+
+  let nameField = $state("");
+  let emailField = $state("");
+  let messageField = $state("");
+
+  let nameError = $state("");
+  let emailError = $state("");
+  let messageError = $state("");
 </script>
 
 <section class="contact">
@@ -66,7 +75,35 @@
     </div>
   </div>
 
-  <form action="" method="POST">
+  <form
+    action="https://formsubmit.co/0045af5c7cf23ef93a74ba76cce3e323"
+    method="POST"
+    on:submit|preventDefault={(e) => {
+      nameError = "";
+      emailError = "";
+      messageError = "";
+
+      if (nameField.length < 3) {
+        nameError = "Name has to be at least 3 characters long.";
+
+        return;
+      }
+
+      if (!z.email().safeParse(emailField)) {
+        emailError = "Email must be valid.";
+
+        return;
+      }
+
+      if (messageField.length < 3) {
+        messageError = "Message has to be at least 3 characters long.";
+
+        return;
+      }
+
+      (e.target as HTMLFormElement).submit();
+    }}
+  >
     <div class="top">
       <h1>Contact</h1>
 
@@ -80,7 +117,11 @@
             name="name"
             id="name"
             placeholder="Enter your name"
+            bind:value={nameField}
           />
+          {#if nameError != ""}
+            <p class="form-error">{nameError}</p>
+          {/if}
         </li>
         <li>
           <h2>E-mail</h2>
@@ -89,16 +130,24 @@
             name="email"
             id="email"
             placeholder="Enter your e-mail"
+            bind:value={emailField}
           />
+          {#if emailError != ""}
+            <p class="form-error">{emailError}</p>
+          {/if}
         </li>
         <li>
           <h2>Message</h2>
-          <input
-            type="text"
+          <textarea
             name="message"
+            rows="3"
             id="message"
             placeholder="Enter your message"
-          />
+            bind:value={messageField}
+          ></textarea>
+          {#if messageError != ""}
+            <p class="form-error">{messageError}</p>
+          {/if}
         </li>
       </ul>
     </div>
@@ -168,12 +217,23 @@
     gap: 0.5rem;
   }
 
-  li input {
+  li input,
+  li textarea {
     border: solid rgba(0, 0, 0, 0.1) 1px;
     border-radius: 0.25rem;
     font-size: 1rem;
     padding: 0.25rem 0.5rem;
     background-color: rgba(0, 0, 0, 0.02);
+    font-family: inherit;
+    min-height: 1rem;
+  }
+
+  li textarea {
+    resize: vertical;
+  }
+
+  .form-error {
+    color: rgb(255, 69, 69);
   }
 
   form h1 {
@@ -233,6 +293,9 @@
   .back-button svg {
     width: 1rem;
     height: 1rem;
+  }
+
+  #message {
   }
 
   @media (min-width: 650px) {

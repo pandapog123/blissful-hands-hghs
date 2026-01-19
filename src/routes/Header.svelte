@@ -47,9 +47,9 @@
         <div>Donate</div>
       </a>
     </li>
-    <!-- <li>
+    <li>
       <Link href="/contact" variant="primary" preventLoad>Contact</Link>
-    </li> -->
+    </li>
   </ul>
 
   <button

@@ -15,7 +15,7 @@ const config = {
     }),
     prerender: {
       // prerender all discoverable routes
-      entries: ["/", "/about"],
+      entries: ["/", "/about", "/contact"],
     },
   },
 };

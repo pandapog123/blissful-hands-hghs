@@ -9,4 +9,4 @@ export function load() {
   };
 }
 
-export const prerender = false;
+export const prerender = true;

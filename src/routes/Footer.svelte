@@ -3,7 +3,7 @@
     <ul class="site-links">
       <li class="site-link"><a href="/">Home</a></li>
       <li class="site-link"><a href="/about">About</a></li>
-      <li class="site-link"><a href="/acheivements">Achievements</a></li>
+      <li class="site-link"><a href="/achievements">Achievements</a></li>
       <li class="site-link">
         <a
           href="https://www.zeffy.com/en-US/donation-form/blissful-hands"

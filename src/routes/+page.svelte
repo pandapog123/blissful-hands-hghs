@@ -3,6 +3,8 @@
   import Title2 from "$lib/assets/images/webp/title-2.webp";
   import Title3 from "$lib/assets/images/webp/title-3.webp";
   import Title4 from "$lib/assets/images/webp/title-4.webp";
+  import Title5 from "$lib/assets/images/webp/title-5.webp";
+  import Title6 from "$lib/assets/images/webp/title-6.webp";
 
   import HomeDepotURL from "$lib/assets/sponsors/Home Depot Logo.png";
   import NanaBBURL from "$lib/assets/sponsors/Nana's Baby Boutique.png";
@@ -13,16 +15,10 @@
   import ShowcaseVideoURL from "$lib/assets/final isa/FINAL ISA OPT.mp4";
   import ShowcaseVideoTNURL from "$lib/assets/final isa/FINAL ISA TN.webp";
 
-  import GardensSproutURL from "$lib/assets/achievements/webp/Garden Sprouts.webp";
-  import NathanBYoung from "$lib/assets/achievements/webp/Nathan B Young.webp";
-  import LotusHouse2025 from "$lib/assets/achievements/webp/Lotus House 2025.webp";
-  import NathanBYoungTT from "$lib/assets/achievements/webp/Nathan B Young Trunk or Treat.webp";
-  import CamillusHouse from "$lib/assets/achievements/webp/Camillus House.webp";
-
   import { onMount } from "svelte";
 
   // #region title
-  let titleImages = [Title1, Title2, Title3, Title4];
+  let titleImages = [Title5, Title6, Title3, Title4];
 
   let currentImage = $state(1);
   let currentImageCooldown: number | undefined;
@@ -54,12 +50,9 @@
 <section class="title">
   <div class="title-content">
     <div class="title-phrase">
-      <h1>Relax with us in Blissful Hands</h1>
+      <h1>Making It Happen With Blissful Hands</h1>
 
-      <p>
-        Helping students manage stress and connect with others through acts of
-        service.
-      </p>
+      <p>Helping students connect with others through acts of service.</p>
     </div>
 
     <div class="links">
@@ -204,7 +197,7 @@
     </div>
   </div>
 </section>
-
+<!-- 
 <section class="achievements">
   <div class="left">
     <h1>Our Achievements</h1>
@@ -291,35 +284,6 @@
           We extend a special thank you to Alvaro Ramirez of Stingtown News for
           his excellent recap.
         </p>
-
-        <!-- <p>
-          This summer, we poured our hearts into giving back, and none of it
-          would've been possible without our incredible community.
-        </p>
-
-        <p>
-          We proudly supported students by providing new uniforms, backpacks,
-          headphones, and school supplies, along with extra supplies for
-          teachers to kick off the school year prepared.
-        </p>
-
-        <p>
-          At Nathan B. Young Elementary, we donated 50 fully stocked 2nd-grade
-          backpacks, 100 uniform polos, and brought smiles through face
-          painting.
-        </p>
-
-        <p>
-          At Skyway Elementary, we supported 18 first graders with their full
-          supply lists and added more face painting fun.
-        </p>
-
-        <p>
-          A huge THANK YOU to our sponsors, Walmart, The Education Fund,
-          MetroPCS, NHS, Triumph AC, Nuevo Amanecer Cafe, Latin Churro, and
-          Costco for believing in our mission. And a special thank you to Alvaro
-          Ramirez from Stingtown News for this amazing recap.
-        </p> -->
       </div>
     </div>
 
@@ -416,7 +380,7 @@
       </div>
     </div>
   </div>
-</section>
+</section> -->
 
 <!-- TODO: IG Graph API -->
 <section class="socials"></section>
@@ -451,7 +415,7 @@
 
   .title h1 {
     font-size: 2rem;
-    max-width: 26rem;
+    max-width: 28rem;
   }
 
   .title p {
@@ -599,7 +563,7 @@
 
     .title h1 {
       font-size: 4rem;
-      max-width: 32rem;
+      max-width: 38rem;
     }
 
     .title p {

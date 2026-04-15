@@ -36,6 +36,9 @@
       <a href="/about" class="page-link">About</a>
     </li>
     <li>
+      <a href="/achievements" class="page-link">Achievements</a>
+    </li>
+    <li>
       <a
         class="page-link"
         href="https://www.zeffy.com/en-US/donation-form/blissful-hands"

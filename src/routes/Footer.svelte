@@ -3,6 +3,7 @@
     <ul class="site-links">
       <li class="site-link"><a href="/">Home</a></li>
       <li class="site-link"><a href="/about">About</a></li>
+      <li class="site-link"><a href="/acheivements">Achievements</a></li>
       <li class="site-link">
         <a
           href="https://www.zeffy.com/en-US/donation-form/blissful-hands"
@@ -76,7 +77,7 @@
   <hr />
 
   <span class="copyright"
-    >Copyright © 2025 Blissful Hands - All Rights Reserved.</span
+    >Copyright © 2026 Blissful Hands - All Rights Reserved.</span
   >
 </footer>
 
